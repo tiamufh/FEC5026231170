@@ -1,0 +1,19 @@
+/* Specificity: 1 (karena hanya elemen p) */
+p { 
+  color: green; 
+}
+
+/* Specificity: 10 (karena ada class .favorit) */
+.favorit { 
+  color: black; 
+}
+
+/* Specificity: 100 (karena ada ID #sarapan) */
+#sarapan { 
+  color: red; 
+}
+
+/* Specificity: 110 (karena kombinasi ID + class) */
+#sarapan .favorit { 
+  color: blue; 
+}
