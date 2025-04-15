@@ -1,0 +1,487 @@
+
+
+.floating-button {
+  position: sticky;
+  z-index: 999;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  padding: 0;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Lonceng di kiri atas */
+#btn-notif {
+  top: 20px;
+  left: 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+/* 3 titik di kanan atas */
+#btn-options {
+  top: 20px;
+  right: 20px;
+  background-color: #6c757d;
+  color: white;
+  border: none;
+}
+
+body {
+  background: url("assets/images/background.png") no-repeat center top;
+  background-size: cover;
+  min-height: 100vh;
+  padding-top: 40px;
+}
+.profile-pic {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
+}
+.card-link {
+  /* max-width: 500px; */
+  margin: 10px 0;
+  border-left: 5px solid orange;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-link img {
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-link .card-body {
+  flex: 1;
+}
+
+.social-icons i {
+  font-size: 1.4rem;
+  margin: 0 5px;
+  color: #333;
+}
+.section-title {
+  margin-top: 30px;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+.social-icon {
+  transition: transform 0.2s ease-in-out;
+  padding: 0.5rem;
+  font-size: 1.5rem;
+  color: #000;
+}
+
+.social-icon:hover {
+  transform: scale(1.075);
+  color: #007bff;
+}
+
+/* nav */
+
+.tab-nav {
+  background-color: rgba(0, 0, 0, 0.4);
+  width: 12rem;
+  margin: 1rem auto 0;
+  padding: 2px;
+  border-radius: 1rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-button {
+  height: 48px;
+  flex: 1;
+  z-index: 20;
+  font-weight: 800;
+  font-size: 0.9rem;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: white;
+}
+
+.tab-button.active {
+  color: black;
+}
+
+.tab-pill {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50%;
+  height: 48px;
+  background: white;
+  border-radius: 1rem;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  z-index: 10;
+}
+
+.tab-pill.move-right {
+  transform: translateX(100%);
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* card horizontal */
+
+.card-link.card-horizontal {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 16px;
+  margin-left: 0;
+}
+
+.card-horizontal img {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.card-horizontal .card-body {
+  flex: 1;
+  text-align: center;
+  font-weight: bold;
+  color: #2e5c3b;
+}
+
+.card-horizontal .menu-icon {
+  font-size: 20px;
+  color: #888;
+  margin-left: 10px;
+}
+
+/* card grid */
+/* Container untuk grid card */
+.card-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
+
+/* Setiap item card di dalam grid */
+.card-grid-item {
+  background-color: white;
+  border-radius: 12px;
+  border: 4px solid orange;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Gambar di atas */
+.card-grid-item img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Footer teks & ikon di bawah gambar */
+.card-grid-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px;
+  font-family: "Arial", sans-serif;
+  font-weight: bold;
+  text-transform: lowercase;
+  color: #2e5c3b;
+  font-size: 14px;
+}
+
+/* Ikon titik tiga */
+.card-grid-footer .menu-icon {
+  font-size: 18px;
+  color: #888;
+  cursor: pointer;
+}
+
+/* youtube card */
+.youtube-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 1rem;
+  position: relative;
+  border: 5px solid orange;
+}
+
+.thumbnail-link {
+  display: block;
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.thumbnail-link img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.play-button-overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 50%;
+  padding: 0.7rem;
+}
+
+.play-button-overlay i {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.youtube-content {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.youtube-content h3 {
+  font-size: 1.2rem;
+  color: #2d3a2e;
+  margin-bottom: 0.5rem;
+  font-family: serif;
+}
+
+.subscribe-btn {
+  background-color: #2d3a2e;
+  color: white;
+  font-weight: bold;
+  padding: 0.4rem 1rem;
+  border-radius: 999px;
+  border: none;
+  font-size: 0.9rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+}
+
+.subscribe-btn i {
+  font-size: 1rem;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: #999;
+  cursor: pointer;
+}
+
+/* image card */
+.image-card {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  border: 5px solid orange;
+}
+
+.thumbnail-link {
+  display: block;
+  position: relative;
+}
+
+.thumbnail-link img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  font-size: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.menu-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #999;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+/* carousel */
+
+.carousel {
+  position: relative;
+  padding: 20px 40px; /* space for buttons */
+}
+
+.carousel-track {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+}
+
+.carousel-track::-webkit-scrollbar {
+  display: none;
+}
+
+.carousel-track .image-card-carousel {
+  scroll-snap-align: start;
+  flex: 0 0 122px; /* card width */
+}
+
+/* your existing image-card-carousel styles */
+.image-card-carousel {
+  position: relative;
+  /* border: 0px solid orange; */
+  border-radius: 12px;
+  overflow: hidden;
+  /* box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); */
+  width: fit-content;
+}
+.image-card-carousel img {
+  width: 144px;
+  height: 216px;
+  display: block;
+  object-fit: cover;
+}
+.card-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  /* padding: 0.5rem; */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0));
+  color: white;
+  font-size: 0.9rem;
+}
+.menu-icon {
+  position: absolute;
+  bottom: 0.5rem;
+  right: 0.5rem;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* nav buttons */
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  font-size: 1.2rem;
+  line-height: 1;
+}
+.carousel-btn.prev {
+  left: 10px;
+}
+.carousel-btn.next {
+  right: 10px;
+}
+
+/* product box */
+
+.product-box {
+  border: 4px solid orange;
+  border-radius: 15px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.product-img {
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+  padding: 10px;
+}
+
+.product-title {
+  font-weight: 600;
+  color: #2f4f4f;
+}
+
+.product-subtitle {
+  color: #6c757d;
+}
+
+.bottom-text {
+  padding: 10px 0 20px;
+}
+
+/* product card */
+.product-card {
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.2s;
+  background-color: #fff;
+  margin-top: 2rem;
+}
+
+.product-card:hover {
+  transform: scale(1.02);
+}
+
+.product-image {
+  height: 200px;
+  object-fit: contain;
+  background-color: #f9f9f9;
+  padding: 1rem;
+}
+
+.product-body {
+  padding: 1rem;
+  text-align: center;
+}
+
+.product-title {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.product-sub {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.product-price {
+  font-size: 0.95rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
